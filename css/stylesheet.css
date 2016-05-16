@@ -1,0 +1,15 @@
+@media (min-width: 420px) {
+	body {
+		width: 420px;
+	}
+}
+* {
+	font-family: "微軟正黑體","Noto Sans CJK TC","思源黑體 TWHK Regular","思源黑體","Source Han Sans TWHK Medium","Source Han Sans TWHK Medium","Noto Sans CJK","Noto Sans CJK Regular",Verdana;
+}
+/*Webcam Screen*/
+#reader {
+	width:320px;
+	height:240px;
+	/*background-color:#AAA;
+	text-align: center;*/
+}

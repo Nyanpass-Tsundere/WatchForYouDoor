@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8' />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<title>QR 門禁系統</title>
+		<script src="scripts/jquery-1.12.0.min.js"></script>
+		<script src="scripts/jsqrcode-combined.min.js"></script>
+		<script src="scripts/html5-qrcode.min.js"></script>
+		<script src="scripts/bootstrap.min.js"></script>
+		<script src="scripts/main.js"></script>
+		<link rel=stylesheet href="css/bootstrap.min.css">
+		<link rel=stylesheet href="css/stylesheet.css">
+	</head>
+	<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand">QR 門禁系統</a>
+		</div>
+
+
+		</div>
+	</nav>
+	<div class="container-fluid">
+		<div class="well" id="statusWell">請感應票卡</div>
+		<!-- Screen -->
+		<div class="panel panel-primary">
+			<div class="panel-heading"><h3 class="panel-title">攝影機畫面</h3></div>
+			<div class="panel-body">
+			<div id="reader"></div>
+		</div>
+		</div>
+		<!-- Setting Content  -->
+		<div class="panel panel-info">
+			<div class="panel-heading"><h3 class="panel-title">設定區</h3></div>
+			<div  class="panel-body">
+				<p>
+					<span id="labMapID" class="label label-default">樓層</span>
+					<span id="labZone" class="label label-default">區域</span>
+				</p>
+				<p>
+					<select id="selMap">
+						<option value=0>2F</option>
+						<option value=1>3F</option>
+						<option value=2>4F</option>
+						<option value=3>Lab</option>
+					</select>
+					<input type="text" id="inputZone" placeholder="區域" aria-describedby="basic-addon1">
+					<button id="btnApply" class="btn btn-primary" onclick="ChangeArea()">套用</button>
+				</p>
+				<p>
+					<button class="btn btn-danger" onclick="Shutdown()">停止</button>
+					<button class="btn btn-primary" onclick="StartUp()">啟用</button>
+				</p>
+			</div>
+		</div>
+		<!--<table style="width: 100%;">
+			<tr>
+				<td>讀取結果:</td>
+				<td><span id="read" class="center"></span></td>
+			</tr>
+			 <tr>
+				<td>讀取錯誤:</td>
+				<td><span id="read_error" class="center"></span></td>
+			</tr>
+			<tr>
+				<td>影像錯誤:</td>
+				<td><span id="vid_error" class="center"></span></td>
+			</tr>
+		</table>-->
+
+		<!-- <button class="btn btn-danger" onclick="JSON_TEST()">JSON POST</button> -->
+	</div>
+	</body>
+</html>
